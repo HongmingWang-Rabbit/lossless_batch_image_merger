@@ -72,8 +72,6 @@ export async function POST(request: NextRequest) {
         // Apply EXIF rotation to maintain original orientation
         image = image.rotate();
 
-        const metadata = await image.metadata();
-
         // Apply manual resize if specified
         if (resizeWidth || resizeHeight) {
           const width = resizeWidth ? parseInt(resizeWidth) : undefined;
@@ -186,8 +184,8 @@ export async function POST(request: NextRequest) {
     // Convert to PNG buffer
     const outputBuffer = await mergedImage.png({ compressionLevel: 0 }).toBuffer();
 
-    // Return the image
-    return new NextResponse(outputBuffer, {
+    // Return the image as a Response
+    return new Response(outputBuffer, {
       status: 200,
       headers: {
         'Content-Type': 'image/png',

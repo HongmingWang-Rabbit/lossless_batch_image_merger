@@ -470,7 +470,7 @@ export default function Home() {
                 src={mergedImage}
                 alt="Merged result"
                 className="max-w-full"
-                onError={(e) => {
+                onError={() => {
                   console.error('Failed to load merged image');
                   console.log('Image src length:', mergedImage?.length);
                 }}

@@ -184,8 +184,8 @@ export async function POST(request: NextRequest) {
     // Convert to PNG buffer
     const outputBuffer = await mergedImage.png({ compressionLevel: 0 }).toBuffer();
 
-    // Return the image as a Response
-    return new Response(outputBuffer, {
+    // Return the image as a Response with Uint8Array
+    return new Response(new Uint8Array(outputBuffer), {
       status: 200,
       headers: {
         'Content-Type': 'image/png',

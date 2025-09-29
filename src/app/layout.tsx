@@ -15,6 +15,20 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Lossless Batch Image Merger - Merge Multiple Images Online Free",
   description: "Free online tool to merge multiple images into one without quality loss. Combine photos vertically, horizontally, or in a grid. Support for PNG lossless merging with batch processing. No watermarks, no size limits.",
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/icon-16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/icon-32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/icon-192.png', sizes: '192x192', type: 'image/png' },
+      { url: '/icon-512.png', sizes: '512x512', type: 'image/png' },
+    ],
+    apple: [
+      { url: '/appicon.png', sizes: '1024x1024', type: 'image/png' },
+    ],
+    shortcut: '/appicon.png',
+  },
+  manifest: '/manifest.json',
   keywords: [
     "lossless image merger",
     "batch image merge",

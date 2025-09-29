@@ -1,0 +1,9 @@
+# Robots.txt for Lossless Batch Image Merger
+User-agent: *
+Allow: /
+
+# Crawl-delay
+Crawl-delay: 0
+
+# Sitemap location
+Sitemap: https://losslessimagemerge.com/sitemap.xml
